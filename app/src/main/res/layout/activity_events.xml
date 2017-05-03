@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_add_event"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/background_basic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Date and Time -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/layout_date"
+                android:layout_gravity="center"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:text="Date"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/secondary_background"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/date"
+                    android:background="@color/background_basic"
+                    android:gravity="center"
+                    android:hint="DD / MM / YYYY"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/layout_time">
+
+                <TextView
+                    android:text="Time"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/secondary_background"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:id="@+id/time"
+                    android:gravity="center"
+                    android:background="@color/background_basic"
+                    android:hint="HH : MM"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <!-- Address -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="Address"
+                android:background="@color/secondary_background"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#e6e6e6">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/et_address"
+                    android:layout_weight="1" />
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+                    <Button
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:id="@+id/btn_clear"
+                        android:background="@drawable/clear"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:fitsSystemWindows="false">
+
+            <fragment
+                android:id="@+id/map_fragment"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:src="@android:drawable/ic_menu_search"/>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <!-- display LatLng -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_lat"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_lng"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!-- Remarks -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/et_note"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Add notes..."
+                android:background="@drawable/editsharp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

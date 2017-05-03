@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.software.anson.mydays">
+
+    <!--add permission to access the relevant service-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!--Screen adaption-->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--Google Map API-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD00Pi18XtepPa9uRVOeMxzdL9oiOnYRgk" />
+        <!--Welcome page/ weather-->
+        <activity
+            android:name=".activity.ActivityWeather"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--add other activities-->
+        <activity android:name=".activity.ActivityLogin"/>
+        <activity android:name=".activity.ActivityAddEvents"/>
+        <activity android:name=".activity.ActivityAddCosts"/>
+        <activity android:name=".activity.ActivityIncome"/>
+        <activity android:name=".activity.ActivitySettings"/>
+        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.ActivityRegister"/>
+        <activity android:name=".activity.ActivityChangePassword"/>
+    </application>
+
+</manifest>

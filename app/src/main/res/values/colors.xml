@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_halo">#E4ECFB</color>
+    <color name="colorPrimary">#4c8b50</color>
+    <color name="background_basic">#ffffff</color>
+    <color name="secondary_background">#deeeee</color>
+    <color name="delete">#e74c3c</color>
+    <color name="modify">#f1c40f</color>
+    <color name="black">#000000</color>
+    <color name="regitser_background">#86d58b</color>
+    <color name="logout">#e11500</color>
+</resources>

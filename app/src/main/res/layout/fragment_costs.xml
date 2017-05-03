@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_costs"
+        android:id="@+id/include"/>
+    <!-- panel -->
+    <RelativeLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/include"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="0"
+            android:textSize="25sp"
+            android:textColor="@color/background_basic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_budget"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget"
+            android:textColor="@color/background_basic"
+            android:layout_below="@+id/tv_budget"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:textSize="22sp"
+                    android:textColor="@color/background_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_income"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:text="Income"
+                    android:textColor="@color/background_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/line">
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="0"
+                    android:textSize="22sp"
+                    android:textColor="@color/background_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_month_cost"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:text="Monthly Cost"
+                    android:textColor="@color/background_basic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!--Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/panel"
+        android:id="@+id/add">
+
+        <Button
+            android:id="@+id/btn_add_cost"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="ADD"
+            android:textColor="@color/background_basic"
+            android:background="@color/modify"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Listview -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/add">
+
+        <com.software.anson.mydays.swipemenu.SwipeMenuListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview2">
+
+        </com.software.anson.mydays.swipemenu.SwipeMenuListView>
+    </LinearLayout>
+
+</RelativeLayout>
